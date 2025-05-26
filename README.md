@@ -1,169 +1,101 @@
-# 🛒 Loja de Eletrônicos - E-commerce Template
+# Loja de Eletrônicos - E-commerce Template
 
-Um template moderno e responsivo de e-commerce desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**, especializado em eletrônicos, acessórios de celular e controles de jogos.
+Template de e-commerce desenvolvido com Next.js, Tailwind CSS e shadcn/ui, baseado no design da Bento Madeiras.
 
-## 🌟 Características
+## 🚀 Tecnologias
 
-- ⚡ **Next.js 14** com App Router
-- 🔷 **TypeScript** para tipagem estática
-- 🎨 **Tailwind CSS** para estilização
-- 📱 **Design Responsivo** para mobile e desktop
-- 🎯 **shadcn/ui** componentes modernos
-- 🛍️ **Interface otimizada** para vendas de eletrônicos
-- 💬 **Chat widget** integrado
-- 🔍 **Sistema de busca** e filtros
-- 🛒 **Carrinho de compras** funcional
-
-## 🛍️ Produtos Suportados
-
-Este template foi projetado especificamente para lojas que vendem:
-
-- 📱 **Acessórios de Celular**
-  - Capas e cases
-  - Carregadores e cabos
-  - Películas e vidros temperados
-  - Fones de ouvido
-  - Suportes e bases
-
-- 🎮 **Controles de Jogos**
-  - Controles para console
-  - Controles para celular
-  - Acessórios para gaming
-  - Joysticks e gamepads
-
-- 💻 **Eletrônicos em Geral**
-  - Gadgets tecnológicos
-  - Dispositivos móveis
-  - Acessórios para computador
-  - Produtos eletrônicos diversos
-
-## 🚀 Tecnologias Utilizadas
-
-- **Frontend:** Next.js 14, React 18, TypeScript
-- **Estilização:** Tailwind CSS, shadcn/ui
-- **Gerenciador:** Bun
-- **Linting:** Biome
-- **Ícones:** Lucide React
-
-## 📦 Instalação
-
-1. **Clone o repositório:**
-```bash
-git clone https://github.com/pedrinho004/loja-eletronicos.git
-cd loja-eletronicos
-```
-
-2. **Instale as dependências:**
-```bash
-bun install
-```
-
-3. **Execute o projeto em desenvolvimento:**
-```bash
-bun dev
-```
-
-4. **Acesse no navegador:**
-```
-http://localhost:3000
-```
-
-## 🎨 Personalização
-
-### Cores e Tema
-As cores principais podem ser customizadas no arquivo `tailwind.config.ts`:
-
-```typescript
-colors: {
-  primary: '#ff6600', // Laranja principal
-  secondary: '#333333', // Cinza escuro
-  // Adicione suas cores aqui
-}
-```
-
-### Produtos
-Edite os dados dos produtos nos componentes em `src/components/` para incluir seus próprios produtos.
-
-### Logo e Branding
-- Substitua o logo no componente `Header.tsx`
-- Atualize as informações da empresa no `Footer.tsx`
-- Personalize as cores e estilos conforme sua marca
+- **Next.js 15** - Framework React com SSR
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário
+- **shadcn/ui** - Componentes UI modernos
+- **Lucide React** - Ícones
+- **Bun** - Runtime e package manager
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
 ├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
+│   ├── globals.css          # Estilos globais
+│   ├── layout.tsx           # Layout principal
+│   └── page.tsx             # Página inicial
 ├── components/
-│   ├── ui/           # Componentes shadcn/ui
-│   ├── Header.tsx    # Cabeçalho e navegação
-│   ├── Footer.tsx    # Rodapé
-│   ├── HeroBanner.tsx # Banner principal
-│   ├── MainCategories.tsx # Categorias principais
-│   ├── CategorySection.tsx # Seções de produtos
-│   └── ChatWidget.tsx # Widget de chat
+│   ├── ui/                  # Componentes shadcn/ui
+│   ├── Header.tsx           # Cabeçalho da loja
+│   ├── Footer.tsx           # Rodapé
+│   ├── HeroBanner.tsx       # Banner principal
+│   ├── MainCategories.tsx   # Categorias principais
+│   ├── CategorySection.tsx  # Seção de categoria
+│   └── ChatWidget.tsx       # Widget de chat
 └── lib/
-    └── utils.ts      # Utilitários
+    └── utils.ts             # Utilitários
 ```
 
-## 🔧 Funcionalidades
+## 🎨 Personalização
 
-- [x] **Header responsivo** com menu mobile
-- [x] **Banner promocional** customizável
-- [x] **Categorias de produtos** organizadas
-- [x] **Grid de produtos** responsivo
-- [x] **Carrinho de compras** visual
-- [x] **Chat widget** flutuante
-- [x] **Footer completo** com links úteis
-- [x] **Design mobile-first**
-- [ ] Sistema de autenticação
-- [ ] Integração com gateway de pagamento
-- [ ] Sistema de reviews
-- [ ] Painel administrativo
+### Cores do Tema
+As cores estão definidas em `tailwind.config.ts`:
 
-## 🎯 Ideal Para
+```typescript
+// Cores específicas (personalize para sua loja)
+'bento-orange': '#e65b10',    // Cor principal
+'bento-dark': '#2e2032',      // Cor escura
+'bento-light': '#f9f9f8',     // Cor clara
+'bento-brown': '#d3935b',     // Cor secundária
+'bento-gray': '#898e8f',      // Cor neutra
+```
 
-Este template é perfeito para:
+### Produtos
+Edite os arrays de produtos em `src/app/page.tsx` para adicionar seus próprios produtos.
 
-- **Lojistas** que querem vender online
-- **Empreendedores** do ramo de tecnologia
-- **Desenvolvedores** que precisam de um e-commerce rápido
-- **Empresas** que querem modernizar sua presença online
+### Categorias
+Personalize as categorias em:
+- `src/components/Header.tsx` (menu de navegação)
+- `src/components/MainCategories.tsx` (categorias principais)
 
-## 📱 Responsividade
+## 🛠️ Comandos
 
-O design foi desenvolvido com abordagem **mobile-first**, garantindo uma experiência excelente em:
+```bash
+# Desenvolvimento
+bun dev
 
-- 📱 Smartphones (320px+)
-- 📟 Tablets (768px+)
-- 💻 Desktops (1024px+)
-- 🖥️ Telas grandes (1440px+)
+# Build para produção
+bun run build
 
-## 🤝 Contribuição
+# Iniciar produção
+bun start
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
+# Linting e formatação
+bun run lint
+bun run format
+```
 
-## 📄 Licença
+## 📱 Recursos
 
-Este projeto é open source e está disponível sob a [MIT License](LICENSE).
+- ✅ Design responsivo
+- ✅ Componentes de produto com hover effects
+- ✅ Menu mobile com categorias
+- ✅ Chat widget interativo
+- ✅ Seções de categoria personalizáveis
+- ✅ Tipografia otimizada
+- ✅ Performance otimizada
 
-## 🆘 Suporte
+## 🎯 Próximos Passos para Personalização
 
-Se você encontrar algum problema ou tiver dúvidas:
+1. **Trocar imagens**: Substitua as URLs das imagens por produtos de eletrônicos
+2. **Atualizar textos**: Modifique títulos, descrições e categorias
+3. **Personalizar cores**: Ajuste o esquema de cores no Tailwind
+4. **Adicionar funcionalidades**: Carrinho, autenticação, pagamento
+5. **SEO**: Atualizar meta tags em `layout.tsx`
 
-1. Verifique a documentação acima
-2. Procure por issues similares
-3. Abra uma nova issue se necessário
+## 🌐 Deploy
+
+O projeto está pronto para deploy em:
+- Vercel (recomendado para Next.js)
+- Netlify
+- Railway
+- Qualquer provedor que suporte Node.js
 
 ---
 
-**Desenvolvido com ❤️ para facilitar a criação de lojas online de eletrônicos**
-
-*Template baseado em design moderno e práticas atuais de desenvolvimento web*
+**Desenvolvido com ❤️ para criar lojas incríveis!**
